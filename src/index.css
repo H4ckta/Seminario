@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Tema Light (padrão) */
+body.light {
+  background-color: white;
+  color: black;
+}
+
+/* Tema Dark */
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

@@ -1,0 +1,179 @@
+/* Estilo geral */
+.edit-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+  }
+  
+  /* Estilo do card */
+  .card {
+    background: white;
+    border-left: 5px solid black;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* Define a largura máxima */
+  }
+  
+  .card h2 {
+    margin-bottom: 20px;
+    color: #2c3e50;
+  }
+  
+  /* Campo de pesquisa */
+.search {
+    display: flex;
+    width: 100%; /* Largura total do card */
+    margin-bottom: 10px;
+  }
+  
+  .search input {
+    flex: 1; /* Faz o input ocupar todo o espaço disponível */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px; /* Bordas arredondadas à esquerda */
+    height: 45px; /* Altura consistente */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da altura */
+  }
+  
+  .search button {
+    width: 45px; /* Mesma altura que o input */
+    height: 45px; /* Mesma altura que o input */
+    background: #2c3e50;
+    color: white;
+    border: 1px solid #ccc;
+    border-left: none; /* Remove a borda entre o botão e o input */
+    border-radius: 0 5px 5px 0; /* Bordas arredondadas à direita */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+  }
+  
+  .search button:hover {
+    background: #34495e; /* Cor ao passar o mouse */
+  }
+
+  .search button svg {
+    width: auto; /* Adapta-se ao tamanho do ícone definido */
+    height: auto;
+    font-size: inherit; /* Não sobrescreve o tamanho definido no JSX */
+  }
+  
+  
+
+  
+  
+  /* Dropdown de sugestões */
+  .dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 31%; /* Mesma largura do card */
+    position: absolute; /* Alinhado ao input */
+    z-index: 10;
+  }
+  
+  .dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .dropdown li:hover {
+    background: #f4f4f4;
+  }
+  
+  /* Formulário */
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  form textarea {
+    resize: none;
+    height: 80px;
+  }
+  
+  form button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  form button:hover {
+    background: #34495e;
+  }
+  
+  /* Mensagem de erro */
+  .not-found {
+    color: #e74c3c;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  /* Notificação */
+  .notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out, fadeOut 0.5s ease-in 4.5s;
+  }
+  
+  .notification.success {
+    background: #2ecc71;
+  }
+  
+  .notification.error {
+    background: #e74c3c;
+  }
+  
+  /* Animações */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+  }
+  

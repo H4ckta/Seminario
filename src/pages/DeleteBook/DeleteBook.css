@@ -1,0 +1,63 @@
+/* Estilo geral */
+.delete-book-container {
+    position: relative; /* Define um contexto de posição */
+  }
+  
+  .delete-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    padding: 20px;
+    transition: filter 0.3s ease; /* Suaviza o efeito de blur */
+  }
+  
+  .delete-book.blurred {
+    filter: blur(5px); /* Aplica o efeito de desfoque */
+  }
+  
+  /* Popup de confirmação */
+  .confirm-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    z-index: 20; /* Garante que o popup esteja por cima do blur */
+    filter: none; /* Remove qualquer efeito de blur do popup */
+  }
+  
+  /* Ações do popup */
+  .popup-actions {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .popup-actions button {
+    background: #2c3e50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  
+  .popup-actions button:hover {
+    background: #34495e;
+  }
+  
+  .popup-actions button:first-child {
+    background: #e74c3c;
+  }
+  
+  .popup-actions button:first-child:hover {
+    background: #c0392b;
+  }
+  
